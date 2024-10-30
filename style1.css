@@ -1,0 +1,128 @@
+body {
+    background: linear-gradient(to right, #F37335, #FDC830);
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 30px 30px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    margin-top: -20px;
+}
+
+.container {
+    padding: 16px;
+    text-align: center;
+    color: #000;
+}
+
+.cake {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+.candle {
+    background-color: #7B020B;
+    width: 30px;
+    height: 70px;
+    border-radius: 8px 8px 30px 30px;
+    margin: auto;
+}
+
+.flame {
+    background-color: orange;
+    width: 15px;
+    height: 35px;
+    border-radius: 50%;
+    margin: -35px auto 0;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { transform: skewX(5deg); }
+    25%, 75% { transform: skewX(-5deg); }
+    50% { transform: skewX(10deg); }
+}
+
+.ml15 {
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-shadow: 2px 0px 5px rgba(15, 6, 4, 0.87);
+    font-family: monospace;
+}
+
+.ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+}
+
+img:hover {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(1px, -2px); }
+    10%, 90% { transform: translate(-1px, 2px); }
+    20%, 80% { transform: translate(-3px, 0px); }
+    30%, 70% { transform: translate(3px, 2px); }
+    40%, 60% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+}
+
+.credit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+}
+
+.credit a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .container h1 {
+        font-size: 1.5em;
+    }
+
+    .cake {
+        width: 80px;
+        height: 120px;
+    }
+
+    .candle {
+        width: 20px;
+        height: 50px;
+    }
+
+    .flame {
+        width: 10px;
+        height: 25px;
+    }
+}
